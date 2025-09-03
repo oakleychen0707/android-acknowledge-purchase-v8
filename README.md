@@ -278,3 +278,11 @@ public class MainActivity extends AppCompatActivity {
 
 ### 6. 結束連線：
 - 在適當時機呼叫 ```endConnection()``` 釋放資源。
+
+## 清理資源
+
+建議在頁面關閉或不需要 Billing 時呼叫：
+```java
+billingHelper.cleanup();
+```
+避免記憶體洩漏或重複連線。
